@@ -94,7 +94,7 @@ function isValidMove(fromSquare, toSquare) {
     const colDiff = Math.abs(toCol - fromCol);
 
     switch (piece) {
-        case '♟': // Siyah Piyon
+        case '♟': 
             if (fromCol === toCol && toRow - fromRow === 1 && !toSquare.firstChild) {
                 return true;
             }
@@ -105,7 +105,7 @@ function isValidMove(fromSquare, toSquare) {
                 return true;
             }
             break;
-        case '♙': // Beyaz Piyon
+        case '♙':
             if (fromCol === toCol && fromRow - toRow === 1 && !toSquare.firstChild) {
                 return true;
             }
