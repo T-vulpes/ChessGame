@@ -20,7 +20,7 @@ let selectedPiece = null;
 let selectedSquare = null;
 
 function createBoard() {
-    chessboard.innerHTML = ''; // Tahtayı sıfırla
+    chessboard.innerHTML = ''; 
     for (let row = 0; row < 8; row++) {
         for (let col = 0; col < 8; col++) {
             const square = document.createElement('div');
