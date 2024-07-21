@@ -79,7 +79,7 @@ function movePiece(square) {
         selectedPiece.dataset.col = square.dataset.col;
         selectedPiece = null;
         selectedSquare = null;
-        turn = turn === 'white' ? 'black' : 'white'; // Sıra değişimi
+        turn = turn === 'white' ? 'black' : 'white';
     }
 }
 
@@ -116,32 +116,32 @@ function isValidMove(fromSquare, toSquare) {
                 return true;
             }
             break;
-        case '♜': // Kale
+        case '♜': 
         case '♖':
             if ((fromRow === toRow || fromCol === toCol) && isPathClear(fromSquare, toSquare)) {
                 return true;
             }
             break;
-        case '♞': // At
+        case '♞': 
         case '♘':
             if (rowDiff * colDiff === 2) {
                 return true;
             }
             break;
-        case '♝': // Fil
+        case '♝':
         case '♗':
             if (rowDiff === colDiff && isPathClear(fromSquare, toSquare)) {
                 return true;
             }
             break;
-        case '♛': // Vezir
+        case '♛':
         case '♕':
             if ((fromRow === toRow || fromCol === toCol || rowDiff === colDiff) && isPathClear(fromSquare, toSquare)) {
                 return true;
             }
             break;
-        case '♚': // Siyah Şah
-        case '♔': // Beyaz Şah
+        case '♚': 
+        case '♔':
             if (rowDiff <= 1 && colDiff <= 1) {
                 return true;
             }
